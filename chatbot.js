@@ -77,7 +77,7 @@
                 chatbotIcon.style.display = "block"; // Show the icon when the chatbot closes
             }
         }
-        window.addEventListener('message', function(event) {
+        window.addEventListener('message', function (event) {
             // Check the origin of the message
             if (event.data === 'toggleChatbot') {
                 toggleChatbot(); // Call the function

@@ -30,7 +30,7 @@
       line-height: 20px;
       margin: 0;
       padding: 0 20px;
-      font-family: brandon_grotesque_medium,Arial,sans-serif;
+      font-family: brandon_grotesque_medium, Arial, sans-serif;
     }
 
     #banner {
@@ -90,13 +90,27 @@
         userAvatarImage: 'user-icon.jpg',
         userAvatarInitials: '',
         hideUploadButton: true,
-        primaryFont : 'brandon_grotesque_medium,Arial,sans-serif',
-        bubbleTextColor : '#4a4a4a',
-        bubbleFromUserTextColor :  '#4a4a4a',
-        fontSizeSmall : 14,
-        sendBoxButtonColor : '#5C3385'
+        primaryFont: 'brandon_grotesque_medium,Arial,sans-serif',
+        bubbleTextColor: '#4a4a4a',
+        bubbleFromUserTextColor: '#4a4a4a',
+        fontSizeSmall: 14,
+        sendBoxButtonColor: '#5C3385',
+        bubbleBackground: '#F4F4F4',
+        bubbleBorderColor: '#F4F4F4',
+        bubbleBorderRadius: 4,
+        bubbleBorderWidth: 2,
+        bubbleNubOffset: 0,
+        bubbleNubSize: 10,
+
+        bubbleFromUserBackground: '#F4F4F4',
+        bubbleFromUserBorderColor: '#F4F4F4',
+        bubbleFromUserBorderRadius: 4,
+        bubbleFromUserBorderWidth: 2,
+        bubbleFromUserNubOffset: 0,
+        bubbleFromUserNubSize: 10,
+        cardPushButtonBackgroundColor :  '#5C3385'
       };
-      
+
 
       // Specifies the token endpoint URL.
       // To get this value, visit Copilot Studio > Settings > Channels > Mobile app page.
@@ -167,7 +181,7 @@
 
       WebChat.renderWebChat({ directLine, locale, styleOptions }, document.getElementById('webchat'));
     })();
-    function minimize(){
+    function minimize() {
       window.parent.postMessage('toggleChatbot', '*');
     }
   </script>
