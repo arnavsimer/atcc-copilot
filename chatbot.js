@@ -21,8 +21,8 @@
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
-                width: 300px;
-                height: 400px;
+                width: 380px;
+                height: 500px;
                 border: none;
                 z-index: 999;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
