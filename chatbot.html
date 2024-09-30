@@ -114,7 +114,7 @@
 
       // Specifies the token endpoint URL.
       // To get this value, visit Copilot Studio > Settings > Channels > Mobile app page.
-      const tokenEndpointURL = new URL('https://defaultfb49385453e543edb3f12d70a4a1c6.74.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cr038_atccCopilot/directline/token?api-version=2022-03-01-preview');
+      const tokenEndpointURL = new URL('https://a003dd200fa0e5cab997cd1403f130.16.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cr038_atccCopilot/directline/token?api-version=2022-03-01-preview');
 
       // Specifies the language the copilot and Web Chat should display in:
       // - (Recommended) To match the page language, set it to document.documentElement.lang
@@ -178,7 +178,12 @@
           }
         }
       });
-
+      const store = window.WebChat.createStore({}, ({ dispatch }) => next => action => {
+        if (action.type === 'DIRECT_LINE/INCOMING_ACTIVITY') {
+          const activity = action.payload.activity;
+          console.log(activity.text);
+        }
+      });
       WebChat.renderWebChat({ directLine, locale, styleOptions }, document.getElementById('webchat'));
     })();
     function minimize() {
