@@ -1,4 +1,14 @@
 (function () {
+    chatbot = {
+        notifyChatbot : function(event){
+            console.log(event);
+        },
+        events : {
+            LOGIN : "LOGIN",
+            LOCATION_CHANGE : "LOCATION_CHANGE",
+            LOGOUT : "LOGOUT"
+        }
+    }
     // Ensure the script runs after the DOM is loaded
     document.addEventListener("DOMContentLoaded", function () {
         // Inject styles into the page for chatbot
