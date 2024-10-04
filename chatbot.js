@@ -40,6 +40,7 @@
                 opacity: 0;
                 transform: translateY(50px);
                 transition: all 0.3s ease-in-out;
+                border-radius: 16px;
             }
             .open .chatbot-iframe {
                 visibility: visible;
