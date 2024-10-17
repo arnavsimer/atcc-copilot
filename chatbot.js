@@ -55,7 +55,7 @@
 
         // Create chatbot icon image element
         var chatbotIcon = document.createElement("img");
-        chatbotIcon.src = "./chatbot-icon.jpg"; // Replace with actual image URL
+        chatbotIcon.src = "/chatbot-icon.jpg"; // Replace with actual image URL
         chatbotIcon.className = "chatbot-icon";
         chatbotIcon.id = "chatbot-icon";
         chatbotIcon.alt = "Chatbot Icon";
@@ -70,7 +70,7 @@
 
         // Create chatbot iframe
         var chatbotIframe = document.createElement("iframe");
-        chatbotIframe.src = "./chatbot.html"; // Replace with actual chatbot page URL
+        chatbotIframe.src = "/chatbot.html"; // Replace with actual chatbot page URL
         chatbotIframe.className = "chatbot-iframe";
 
         // Append iframe to the container
