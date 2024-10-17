@@ -71,7 +71,7 @@
 
         // Create chatbot iframe
         var chatbotIframe = document.createElement("iframe");
-        chatbotIframe.src = "/chatbot.html"; // Replace with actual chatbot page URL
+        chatbotIframe.src = chatbot_base_url +"/chatbot.html"; // Replace with actual chatbot page URL
         chatbotIframe.className = "chatbot-iframe";
 
         // Append iframe to the container
