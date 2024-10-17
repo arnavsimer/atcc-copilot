@@ -11,6 +11,7 @@
     }
     // Ensure the script runs after the DOM is loaded
     document.addEventListener("DOMContentLoaded", function () {
+        var chatbot_base_url = "https://arnavsimer.github.io/atcc-copilot";
         // Inject styles into the page for chatbot
         var style = document.createElement("style");
         style.innerHTML = `
@@ -55,7 +56,7 @@
 
         // Create chatbot icon image element
         var chatbotIcon = document.createElement("img");
-        chatbotIcon.src = "/chatbot-icon.jpg"; // Replace with actual image URL
+        chatbotIcon.src = chatbot_base_url + "/chatbot-icon.jpg"; // Replace with actual image URL
         chatbotIcon.className = "chatbot-icon";
         chatbotIcon.id = "chatbot-icon";
         chatbotIcon.alt = "Chatbot Icon";
