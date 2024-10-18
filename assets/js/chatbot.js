@@ -1,4 +1,5 @@
 (function () {
+    const baseUrl = "https://arnavsimer.github.io/atcc-copilot/"
     // Ensure the script runs after the DOM is loaded
     document.addEventListener("DOMContentLoaded", function () {
         // Inject styles into the page for chatbot
@@ -45,7 +46,7 @@
 
         // Create chatbot icon image element
         var chatbotIcon = document.createElement("img");
-        chatbotIcon.src = "assets/images/chatbot-icon.jpg"; // Replace with actual image URL
+        chatbotIcon.src = baseUrl+"assets/images/chatbot-icon.jpg"; // Replace with actual image URL
         chatbotIcon.className = "chatbot-icon";
         chatbotIcon.id = "chatbot-icon";
         chatbotIcon.alt = "Chatbot Icon";
@@ -60,7 +61,7 @@
 
         // Create chatbot iframe
         var chatbotIframe = document.createElement("iframe");
-        chatbotIframe.src = "chatbot.html"; // Replace with actual chatbot page URL
+        chatbotIframe.src = baseUrl+"chatbot.html"; // Replace with actual chatbot page URL
         chatbotIframe.className = "chatbot-iframe";
 
         // Append iframe to the container
