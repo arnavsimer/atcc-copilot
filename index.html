@@ -1,24 +1,69 @@
-<script crossorigin="anonymous" src="https://arnavsimer.github.io/atcc-copilot/chatbot.js"></script>
+<script crossorigin="anonymous" src="assets/js/chatbot.js"></script>
 <script>
     //Sample code to call an event
-    window.onload = function() {
-    chatbot.notifyChatbot({
-        event: chatbot.events.LOGIN,
-        data :{
-            isLoggedId : true,
-            chatbot_token : "<FE need to call an api to fetch this token. Avinash will share the API details>",
-            user_details : {
-                user_id : 123,
-                first_name : "John",
-                middle_name : "doe",
-                last_name : "miller",
-                email : "john@doe.com",
-                location_id : "IN",
-                location_name : "India"
+    // window.onload = function () {
+    //     chatbot.notifyChatbot({
+    //         event: chatbot.events.LOGIN,
+    //         data: {
+    //             is_logged_in: true,
+    //             chatbot_token: "<FE need to call an api to fetch this token. Avinash will share the API details>",
+    //             user_details: {
+    //                 user_id: 123,
+    //                 first_name: "John",
+    //                 middle_name: "doe",
+    //                 last_name: "miller",
+    //                 email: "john@doe.com",
+    //                 location_id: "IN",
+    //                 location_name: "India"
+    //             }
+    //         }
+    //     })
+    // }
+    function sendLoginEvent() {
+        chatbot.notifyChatbot(
+            {
+                event: chatbot.events.LOGIN,
+                data: {
+                    is_logged_in: true,
+                    chatbot_token: "sample_token",
+                    user_details: {
+                        user_id: 123,
+                        first_name: "John",
+                        middle_name: "doe",
+                        last_name: "miller",
+                        email: "john@doe.com",
+                        location_id: "IN",
+                        location_name: "India"
+                    }
+                }
             }
-        }
-    })
-}
+        )
+    }
+    function sendLogoutEvent() {
+        chatbot.notifyChatbot(
+            {
+                event: chatbot.events.LOGOUT,
+                data: {
+                    is_logged_in: false,
+                    user_details: {
+                        user_id: 123
+                    }
+                }
+            }
+        )
+    }
+    function sendCountryChangeEvent() {
+        chatbot.notifyChatbot({
+            event: chatbot.events.LOCATION_CHANGE,
+            data: {
+                location_id: "US",
+                location_name: "USA"
+            }
+        })
+    }
 </script>
 
 
+<button onclick="sendLoginEvent()" style="background-color: green;color:whitesmoke;border:none;padding: 10px;">Login Event</button>
+<button onclick="sendLogoutEvent()" style="background-color: red;color:whitesmoke;border:none;padding: 10px;">Logout Event</button>
+<button onclick="sendCountryChangeEvent()" style="background-color: blue;color:whitesmoke;border:none;padding: 10px;">Country Change Event</button>

@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+}
+
+h1 {
+  color: whitesmoke;
+  font-family: Segoe UI;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0 20px;
+  font-family: brandon_grotesque_medium, Arial, sans-serif;
+}
+
+#banner {
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5C3385;
+  display: flex;
+  height: 50px;
+}
+
+#webchat {
+  height: calc(100% - 50px);
+  overflow: hidden;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+}
+
+#minimize-btn {
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0rem 1rem;
+}

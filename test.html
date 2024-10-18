@@ -1,0 +1,22 @@
+<script crossorigin="anonymous" src="https://arnavsimer.github.io/atcc-copilot/chatbot.js"></script>
+<script>
+    //Sample code to call an event
+    window.onload = function() {
+    chatbot.notifyChatbot({
+        event: chatbot.events.LOGIN,
+        data :{
+            isLoggedId : true,
+            chatbot_token : "<FE need to call an api to fetch this token. Avinash will share the API details>",
+            user_details : {
+                user_id : 123,
+                first_name : "John",
+                middle_name : "doe",
+                last_name : "miller",
+                email : "john@doe.com",
+                location_id : "IN",
+                location_name : "India"
+            }
+        }
+    })
+}
+</script>
