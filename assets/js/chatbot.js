@@ -14,6 +14,8 @@
                 cursor: pointer;
                 z-index: 1000;
                 transition: transform 0.3s ease;
+                object-fit: cover;
+                border-radius: 50%;
             }
             .chatbot-icon:hover {
                 transform: scale(1.1);
